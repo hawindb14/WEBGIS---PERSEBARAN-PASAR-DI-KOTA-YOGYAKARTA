@@ -1,0 +1,310 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Pengaturan header */
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+}
+header {
+    background: url(pexels-nic-law-757432.jpg) center/cover no-repeat;
+    color: white;
+    text-align: center;
+    padding: 10rem 0;
+    position: relative;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(7, 15, 43, 0.4);
+}
+
+header h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+/* NAV BAR */
+nav {
+    position: relative; 
+    z-index: 2; 
+}
+
+.logo img {
+    width: 80px;
+    height: auto;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    width: 100%; 
+    max-width: 1200px; 
+    margin: 0 auto; 
+    position: fixed; 
+    top: 0; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    z-index: 3; 
+
+}
+
+.logo a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    
+}
+
+.menu {
+    list-style-type: none;
+    display: flex;
+}
+
+.menu li {
+    margin: 0 1rem;
+    position: relative;
+}
+
+.menu li a {
+    text-decoration: none;
+    color:#c1c9fa;
+    font-weight: bold;
+}
+
+.menu li a:hover {
+    display: block;
+    color: #6c67ff;
+}
+
+.menu li:hover .dropdown {
+    display: block;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    background-color: rgba(33, 47, 104, 0.9);
+    padding: 0.5rem;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+}
+
+.dropdown a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5rem 0;
+}
+
+/* H2 UNTUK PETA */  
+
+h2 {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* BAGIAN JENIS PASAR */
+
+.main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background-color: #f4f4f4;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+}
+
+.kuliner {
+    margin-bottom: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: center;
+}
+
+.kuliner h3 {
+    font-size: 24px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    width: 100%;
+}
+
+.kuliner-item {
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+    margin: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 5px;
+    flex: 0 0 calc(33.33% - 1rem); 
+    max-width: calc(33.33% - 1rem); 
+    cursor: pointer; 
+    transition: transform 0.2s;
+}
+
+.kuliner-item:hover {
+    transform: scale(1.05); 
+}
+
+.kuliner-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;    
+}
+
+.kuliner-item h4 {
+    margin-bottom: 0.5rem;
+    
+}
+
+.kuliner-item p {
+    font-size: 0.9rem; 
+    margin: 0.5rem 0;
+}
+
+/* BAGIAN DATA DAN SEBAGAINYA */
+
+.data-item {
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+    margin: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 5px;
+    flex: 0 0 calc(10% - 1rem); 
+    max-width: calc(10% - 1rem); 
+    cursor: pointer; 
+    transition: transform 0.2s;
+}
+
+.data-item:hover {
+    transform: scale(1.05); 
+}
+
+.data-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;    
+}
+
+.data-item h4 {
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+/* BAGIAN CONTACT US */
+
+.contact-container{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.contact-left{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+}
+
+.contact-left-title h5{
+    font-weight: 600;
+    color:#070F2B;
+    font-size: 30px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.contact-left-title hr{
+    border: none;
+    width: 230px;
+    height: 4px;
+    background-color: #535C91;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.contact-inputs{
+    width: 400px;
+    height: 50px;
+    border: 2px solid #1B1A55;
+    outline: none;
+    padding-left: 25px;
+    font-weight: 500;
+    color: rgb(0, 0, 0);
+    border-radius: 50px;
+}
+
+.contact-left textarea{
+    height: 140px;
+    padding-top: 15px;
+    border-radius: 20px;
+}
+
+.contact-inputs:focus{
+    border: 4px solid #1B1A55;
+}
+
+.contact-inputs::placeholder{
+    color: rgb(0, 0, 0);
+}
+
+.contact-left button{
+    display: flex;
+    align-items: center;
+    padding: 15px 30px;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    gap: 10px;
+    border: none;
+    border-radius: 50px;
+    background: linear-gradient(270deg,#404f86,  #070F2B);
+    cursor: pointer;
+}
+
+.contact-left button img{
+    height: 30px;
+}
+
+/* COPYRIGHT + MEDSOS */
+
+.contact-right img{
+    width: 300px;
+}
+
+#copyright {
+    text-align: center;
+    width: 100%;
+    padding: 50px 0px 5px 0px;
+    margin-top: 50px;
+    margin-bottom: 0;
+}
+#medsos {
+    text-align: center;
+    width: 100%;
+    padding: 5px 0px 50px 0px; 
+    margin-top: 0;
+}
+.icon {
+    width: 17px; 
+    height: 17px; 
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 5px; 
+}
